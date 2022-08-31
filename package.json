@@ -47,8 +47,8 @@
   },
   "lint-staged": {
     "**/*.{js,jsx,ts,tsx}": [
-      "yarn run lint",
-      "prettier --write"
+      "prettier --write",
+      "yarn run lint"
     ]
   },
   "devDependencies": {
