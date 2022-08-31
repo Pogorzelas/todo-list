@@ -23,6 +23,7 @@
         "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx", ".ts", ".tsx"] }],
         "@typescript-eslint/explicit-function-return-type": "off",
         "@typescript-eslint/space-before-function-paren": "off",
-        "@typescript-eslint/consistent-type-definitions": [2, "type"]
+        "@typescript-eslint/consistent-type-definitions": [2, "type"],
+        "comma-dangle": "off"
     }
 }
