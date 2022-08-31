@@ -1,11 +1,14 @@
 import React from 'react'
-import { Box } from '@mui/material'
+import Layout from '../../core/components/Layout'
+import { StyledContainer } from './Home.styles'
 
 function Home() {
   return (
-    <Box>
-      <>Home</>
-    </Box>
+    <Layout>
+      <StyledContainer>
+        <>Home</>
+      </StyledContainer>
+    </Layout>
   )
 }
 
