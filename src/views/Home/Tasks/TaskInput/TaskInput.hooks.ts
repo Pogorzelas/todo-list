@@ -15,7 +15,7 @@ function useTaskInputManager(setTask: Dispatch<Task>) {
     const task: Task = {
       id: generateId(),
       status: TaskStatus.TODO,
-      value,
+      name: value,
     }
     setTask(task)
     setValue('')

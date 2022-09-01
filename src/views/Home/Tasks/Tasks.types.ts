@@ -1,9 +1,9 @@
-import { TasksStatus } from './Tasks.enums'
+import { TaskStatus } from './Tasks.enums'
 
 type Task = {
   id: string
-  value: string
-  status: TasksStatus
+  name: string
+  status: TaskStatus
 }
 
 export type { Task }

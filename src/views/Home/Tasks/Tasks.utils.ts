@@ -10,6 +10,10 @@ function useTasksManger() {
     setTasks((previousTasks) => [...previousTasks, task])
   }
 
+  const removeTask = (id: string) => {
+    setTasks((tasks) => tasks.filter((task) => task.id !== id))
+  }
+
   const changeTaskStatus = (task: Task, statusToChange: TaskStatus) => {
     setTasks((previousTasks) => {
       const currentTasks = [...previousTasks]
@@ -30,6 +34,7 @@ function useTasksManger() {
   return {
     tasks,
     setTask,
+    removeTask,
     changeTaskStatus,
   }
 }

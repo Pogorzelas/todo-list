@@ -1,21 +1,21 @@
 import React from 'react'
-import TaskInput from './TaskInput/TaskInput.component'
+import TaskInput from './TaskInput'
 import { useTasksManger } from './Tasks.utils'
+import { Box } from '@mui/material'
+import TaskLists from './TaskLists'
 
 function Tasks() {
-  const { tasks, setTask } = useTasksManger()
+  const { tasks, setTask, changeTaskStatus, removeTask } = useTasksManger()
 
   return (
-    <div>
+    <Box>
       <TaskInput setTask={setTask} />
-      {tasks.map((task) => (
-        <div key={task.id}>
-          <div>{task.id}</div>
-          <div>{task.value}</div>
-          <div>{task.status}</div>
-        </div>
-      ))}
-    </div>
+      <TaskLists
+        tasks={tasks}
+        changeTaskStatus={changeTaskStatus}
+        removeTask={removeTask}
+      />
+    </Box>
   )
 }
 
