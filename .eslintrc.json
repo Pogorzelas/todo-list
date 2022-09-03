@@ -36,8 +36,6 @@
             "logical": "parens-new-line",
             "prop": "parens-new-line"
         }],
-        "react/jsx-indent": [2, 2, {"checkAttributes": true, "indentLogicalExpressions": true}],
-        "react/jsx-indent-props": [2, 2],
         "react/jsx-first-prop-new-line": [2, "always"],
         "react/jsx-tag-spacing": [2, {
             "closingSlash": "never",
