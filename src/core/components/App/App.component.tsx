@@ -1,12 +1,16 @@
 import React from 'react'
 import AppProvider from './AppProvider'
 import Routes from './Routes'
+import { store } from '../../store'
+import { Provider } from 'react-redux'
 
 function App() {
   return (
-    <AppProvider>
-      <Routes />
-    </AppProvider>
+    <Provider store={store}>
+      <AppProvider>
+        <Routes />
+      </AppProvider>
+    </Provider>
   )
 }
 
