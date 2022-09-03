@@ -7,7 +7,7 @@ function TaskInput() {
 
   return (
     <Box>
-      <TextField value={value} onChange={handleChange} />
+      <TextField size="small" value={value} onChange={handleChange} />
       <Button onClick={handleAdd}>Add</Button>
     </Box>
   )

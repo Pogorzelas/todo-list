@@ -1,11 +1,10 @@
 import styled from 'styled-components'
-import { Box } from '@mui/material'
+import Layout from '../../core/components/Layout'
 
-const StyledContainer = styled(Box)`
-  min-height: 100vh;
+const StyledLayout = styled(Layout)`
   display: flex;
   justify-content: center;
   align-items: center;
 `
 
-export { StyledContainer }
+export { StyledLayout }

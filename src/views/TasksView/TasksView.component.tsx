@@ -1,15 +1,12 @@
 import React from 'react'
-import Layout from '../../core/components/Layout'
-import { StyledContainer } from './TasksView.styles'
 import Tasks from './Tasks'
+import { StyledLayout } from './TasksView.styles'
 
 function TasksView() {
   return (
-    <Layout>
-      <StyledContainer>
-        <Tasks />
-      </StyledContainer>
-    </Layout>
+    <StyledLayout>
+      <Tasks />
+    </StyledLayout>
   )
 }
 

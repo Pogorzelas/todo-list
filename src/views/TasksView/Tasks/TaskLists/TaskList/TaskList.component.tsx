@@ -14,7 +14,7 @@ function TaskList({ listStatus, title }: Props) {
 
   return (
     <Box>
-      <Typography variant="h3">{title}</Typography>
+      <Typography variant="h5">{title}</Typography>
       {filteredTasks.map((task) => (
         <TaskItem
           key={task.id}

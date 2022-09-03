@@ -3,10 +3,11 @@ import { StyledContainer } from './Layout.styles'
 
 type Props = {
   children: ReactNode
+  className?: string
 }
 
-function Layout({ children }: Props) {
-  return <StyledContainer>{children}</StyledContainer>
+function Layout({ children, className }: Props) {
+  return <StyledContainer className={className}>{children}</StyledContainer>
 }
 
 export default Layout
