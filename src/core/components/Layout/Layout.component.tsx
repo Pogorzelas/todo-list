@@ -7,7 +7,13 @@ type Props = {
 }
 
 function Layout({ children, className }: Props) {
-  return <StyledContainer className={className}>{children}</StyledContainer>
+  return (
+    <StyledContainer
+      className={className}
+>
+      {children}
+    </StyledContainer>
+  )
 }
 
 export default Layout

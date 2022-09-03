@@ -23,7 +23,27 @@
         "@typescript-eslint/space-before-function-paren": "off",
         "@typescript-eslint/consistent-type-definitions": [2, "type"],
         "comma-dangle": "off",
-        "@typescript-eslint/strict-boolean-expressions": "off"
+        "@typescript-eslint/strict-boolean-expressions": "off",
+        "react/jsx-one-expression-per-line": [2, { "allow": "literal" }],
+        "react/jsx-max-props-per-line": [2, { "maximum": 1 }],
+        "react/jsx-wrap-multilines": [2, {
+            "declaration": "parens-new-line",
+            "assignment": "parens-new-line",
+            "return": "parens-new-line",
+            "arrow": "parens-new-line",
+            "condition": "parens-new-line",
+            "logical": "parens-new-line",
+            "prop": "parens-new-line"
+        }],
+        "react/jsx-indent": [2, 2, {"checkAttributes": true, "indentLogicalExpressions": true}],
+        "react/jsx-indent-props": [2, 2],
+        "react/jsx-first-prop-new-line": [2, "always"],
+        "react/jsx-tag-spacing": [2, {
+            "closingSlash": "never",
+            "beforeSelfClosing": "proportional-always",
+            "afterOpening": "never",
+            "beforeClosing": "proportional-always"
+        }]
     },
     "ignorePatterns": ["**/*.d.ts"]
 }
