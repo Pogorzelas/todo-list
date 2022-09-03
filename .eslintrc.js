@@ -6,32 +6,31 @@ module.exports = {
   },
   extends: [
     'plugin:react/recommended',
-    'standard-with-typescript'
   ],
-  overrides: [
-  ],
+  overrides: [],
+  parser: '@typescript-eslint/parser',
   parserOptions: {
     ecmaVersion: 'latest',
     sourceType: 'module',
-    project: ['./tsconfig.json']
   },
   plugins: [
-    'react'
+    'react', '@typescript-eslint'
   ],
   rules: {
     semi: ['error', 'always'],
+    'comma-dangle': 'off',
     '@typescript-eslint/explicit-function-return-type': 'off',
     '@typescript-eslint/space-before-function-paren': 'off',
     '@typescript-eslint/ban-types': 'error',
-    '@typescript-eslint/consistent-generic-constructors': [2, 'constructor'],
-    '@typescript-eslint/consistent-type-definitions': [2, 'type'],
-    '@typescript-eslint/indent': [2, 2],
+    '@typescript-eslint/consistent-generic-constructors': ['error', 'constructor'],
+    '@typescript-eslint/consistent-type-definitions': ['error', 'type'],
+    '@typescript-eslint/indent': ['error', 2],
     '@typescript-eslint/semi': 'off',
-    '@typescript-eslint/no-duplicate-enum-values': 2,
-    '@typescript-eslint/no-explicit-any': 2,
-    '@typescript-eslint/no-non-null-assertion': 2,
-    '@typescript-eslint/no-inferrable-types': 2,
-    '@typescript-eslint/member-delimiter-style': [2, {
+    '@typescript-eslint/no-duplicate-enum-values': 'error',
+    '@typescript-eslint/no-explicit-any': 'error',
+    '@typescript-eslint/no-non-null-assertion': 'error',
+    '@typescript-eslint/no-inferrable-types': 'error',
+    '@typescript-eslint/member-delimiter-style': ['error', {
       multiline: {
         delimiter: 'semi',
         requireLast: true
@@ -42,13 +41,12 @@ module.exports = {
       },
       multilineDetection: 'brackets'
     }],
-    '@typescript-eslint/method-signature-style': [2, 'property'],
-    '@typescript-eslint/no-empty-interface': 2,
-    'comma-dangle': 'off',
+    '@typescript-eslint/method-signature-style': ['error', 'property'],
+    '@typescript-eslint/no-empty-interface': 'error',
     '@typescript-eslint/strict-boolean-expressions': 'off',
-    'react/jsx-one-expression-per-line': [2, { allow: 'literal' }],
-    'react/jsx-max-props-per-line': [2, { maximum: 1 }],
-    'react/jsx-wrap-multilines': [2, {
+    'react/jsx-one-expression-per-line': ['error', { allow: 'literal' }],
+    'react/jsx-max-props-per-line': ['error', { maximum: 1 }],
+    'react/jsx-wrap-multilines': ['error', {
       declaration: 'parens-new-line',
       assignment: 'parens-new-line',
       return: 'parens-new-line',
@@ -57,13 +55,13 @@ module.exports = {
       logical: 'parens-new-line',
       prop: 'parens-new-line'
     }],
-    'react/jsx-first-prop-new-line': [2, 'always'],
-    'react/jsx-tag-spacing': [2, {
+    'react/jsx-first-prop-new-line': ['error', 'always'],
+    'react/jsx-tag-spacing': ['error', {
       closingSlash: 'never',
       beforeSelfClosing: 'proportional-always',
       afterOpening: 'never',
       beforeClosing: 'proportional-always'
-    }]
+    }],
   },
   ignorePatterns: ['**/*.d.ts']
 };
