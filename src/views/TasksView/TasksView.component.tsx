@@ -1,9 +1,9 @@
 import React from 'react'
 import Layout from '../../core/components/Layout'
-import { StyledContainer } from './Home.styles'
+import { StyledContainer } from './TasksView.styles'
 import Tasks from './Tasks'
 
-function Home() {
+function TasksView() {
   return (
     <Layout>
       <StyledContainer>
@@ -13,4 +13,4 @@ function Home() {
   )
 }
 
-export default Home
+export default TasksView

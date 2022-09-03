@@ -1,22 +1,21 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit'
-import { ReducerName } from '../reducers.enums'
 import { Task } from './tasks.types'
 import { TaskStatus } from './tasks.enums'
 
 type State = {
-  tasks: Task[]
+  entities: Task[]
 }
 
 const initialState: State = {
-  tasks: [],
+  entities: [],
 }
 
 const tasksSlice = createSlice({
-  name: ReducerName.Tasks,
+  name: 'tasks',
   initialState,
   reducers: {
     addTask: (state, action: PayloadAction<Task>) => {
-      state.tasks.push(action.payload)
+      state.entities.push(action.payload)
     },
     changeTaskStatus: (
       state,
@@ -25,18 +24,20 @@ const tasksSlice = createSlice({
         statusToChange: TaskStatus
       }>
     ) => {
-      const taskIndex = state.tasks.findIndex(
-        (task) => task.id === action.payload.id
+      const taskIndex = state.entities.findIndex(
+        (entity) => entity.id === action.payload.id
       )
 
       const isTaskFound = taskIndex > -1
 
       if (isTaskFound) {
-        state.tasks[taskIndex].status = action.payload.statusToChange
+        state.entities[taskIndex].status = action.payload.statusToChange
       }
     },
     removeTask: (state, action: PayloadAction<{ id: string }>) => {
-      state.tasks = state.tasks.filter((task) => task.id !== action.payload.id)
+      state.entities = state.entities.filter(
+        (entity) => entity.id !== action.payload.id
+      )
     },
   },
 })
