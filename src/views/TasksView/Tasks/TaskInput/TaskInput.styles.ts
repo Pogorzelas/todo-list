@@ -1,6 +1,9 @@
 import styled from 'styled-components'
-import { TextField } from '@mui/material'
+import { Box } from '@mui/material'
 
-const StyledTextField = styled(TextField)``
+const StyledBox = styled(Box)`
+  display: flex;
+  flex-direction: row;
+`
 
-export { StyledTextField }
+export { StyledBox }

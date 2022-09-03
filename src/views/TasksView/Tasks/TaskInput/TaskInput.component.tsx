@@ -1,15 +1,16 @@
 import React from 'react'
-import { Box, Button, TextField } from '@mui/material'
+import { Button, TextField } from '@mui/material'
 import { useTaskInputManager } from './TaskInput.hooks'
+import { StyledBox } from './TaskInput.styles'
 
 function TaskInput() {
   const { value, handleChange, handleAdd } = useTaskInputManager()
 
   return (
-    <Box>
+    <StyledBox>
       <TextField size="small" value={value} onChange={handleChange} />
       <Button onClick={handleAdd}>Add</Button>
-    </Box>
+    </StyledBox>
   )
 }
 
