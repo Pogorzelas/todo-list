@@ -16,7 +16,12 @@ function TaskList({ listStatus, title }: Props) {
     <Box>
       <Typography variant="h3">{title}</Typography>
       {filteredTasks.map((task) => (
-        <TaskItem key={task.id} task={task} />
+        <TaskItem
+          key={task.id}
+          id={task.id}
+          name={task.name}
+          status={task.status}
+        />
       ))}
     </Box>
   )
