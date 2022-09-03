@@ -22,6 +22,7 @@
         "@typescript-eslint/explicit-function-return-type": "off",
         "@typescript-eslint/space-before-function-paren": "off",
         "@typescript-eslint/consistent-type-definitions": [2, "type"],
+        "@typescript-eslint/indent": [2, 2],
         "comma-dangle": "off",
         "@typescript-eslint/strict-boolean-expressions": "off",
         "react/jsx-one-expression-per-line": [2, { "allow": "literal" }],

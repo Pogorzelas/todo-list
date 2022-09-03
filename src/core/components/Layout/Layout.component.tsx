@@ -10,9 +10,10 @@ function Layout({ children, className }: Props) {
   return (
     <StyledContainer
       className={className}
->
+    >
       {children}
-    </StyledContainer>
+    </StyledContainer
+    >
   )
 }
 

@@ -12,10 +12,10 @@ function AppProvider({ children }: Props) {
   return (
     <MuiThemeProvider
       theme={theme}
->
+    >
       <ThemeProvider
         theme={theme}
->
+      >
         <CssBaseline />
         <BrowserRouter>
           {children}

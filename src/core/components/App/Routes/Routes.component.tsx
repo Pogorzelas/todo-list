@@ -6,8 +6,13 @@ import TasksView from '../../../../views/TasksView'
 function Routes() {
   return (
     <Switch>
-      <Route path={RoutePath.Home} component={TasksView} />
-      <Route path={RoutePath.TaskDetails} />
+      <Route
+        path={RoutePath.Home}
+        component={TasksView}
+      />
+      <Route
+        path={RoutePath.TaskDetails}
+      />
     </Switch>
   )
 }

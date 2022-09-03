@@ -16,7 +16,7 @@ function TaskList({ listStatus, title }: Props) {
     <Box>
       <Typography
         variant="h5"
->
+      >
         {title}
       </Typography>
       {filteredTasks.map((task) => (

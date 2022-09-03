@@ -8,8 +8,16 @@ function TaskInput() {
 
   return (
     <StyledBox>
-      <TextField size="small" value={value} onChange={handleChange} />
-      <Button onClick={handleAdd}>Add</Button>
+      <TextField
+        size="small"
+        value={value}
+        onChange={handleChange}
+      />
+      <Button
+        onClick={handleAdd}
+      >
+        Add
+      </Button>
     </StyledBox>
   )
 }
