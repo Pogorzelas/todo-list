@@ -1,8 +1,8 @@
-import React from 'react'
-import AppProvider from './AppProvider'
-import Routes from './Routes'
-import { store } from '../../store'
-import { Provider } from 'react-redux'
+import React from 'react';
+import AppProvider from './AppProvider';
+import Routes from './Routes';
+import { store } from '../../store';
+import { Provider } from 'react-redux';
 
 function App() {
   return (
@@ -13,7 +13,7 @@ function App() {
         <Routes />
       </AppProvider>
     </Provider>
-  )
+  );
 }
 
-export default App
+export default App;

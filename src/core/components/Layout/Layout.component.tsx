@@ -1,9 +1,9 @@
-import React, { ReactNode } from 'react'
-import { StyledContainer } from './Layout.styles'
+import React, { ReactNode } from 'react';
+import { StyledContainer } from './Layout.styles';
 
 type Props = {
-  children: ReactNode
-  className?: string
+  children: ReactNode;
+  className?: string;
 }
 
 function Layout({ children, className }: Props) {
@@ -14,7 +14,7 @@ function Layout({ children, className }: Props) {
       {children}
     </StyledContainer
     >
-  )
+  );
 }
 
-export default Layout
+export default Layout;

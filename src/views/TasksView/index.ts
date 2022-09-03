@@ -1,1 +1,1 @@
-export { default } from './TasksView.component'
+export { default } from './TasksView.component';

@@ -1,16 +1,16 @@
-import { Box, Typography } from '@mui/material'
-import React from 'react'
-import { TaskStatus } from '../../Tasks.enums'
-import TaskItem from './TaskItem'
-import { useFilterTasksByStatus } from './TaskList.hooks'
+import { Box, Typography } from '@mui/material';
+import React from 'react';
+import { TaskStatus } from '../../Tasks.enums';
+import TaskItem from './TaskItem';
+import { useFilterTasksByStatus } from './TaskList.hooks';
 
 type Props = {
-  listStatus: TaskStatus
-  title: string
+  listStatus: TaskStatus;
+  title: string;
 }
 
 function TaskList({ listStatus, title }: Props) {
-  const filteredTasks = useFilterTasksByStatus(listStatus)
+  const filteredTasks = useFilterTasksByStatus(listStatus);
 
   return (
     <Box>
@@ -28,7 +28,7 @@ function TaskList({ listStatus, title }: Props) {
         />
       ))}
     </Box>
-  )
+  );
 }
 
-export default TaskList
+export default TaskList;

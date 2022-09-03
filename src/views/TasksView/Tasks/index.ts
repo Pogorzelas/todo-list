@@ -1,1 +1,1 @@
-export { default } from './Tasks.component'
+export { default } from './Tasks.component';

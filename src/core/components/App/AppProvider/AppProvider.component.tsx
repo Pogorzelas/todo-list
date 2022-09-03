@@ -1,11 +1,11 @@
-import React, { ReactNode } from 'react'
-import { ThemeProvider } from 'styled-components'
-import { CssBaseline, ThemeProvider as MuiThemeProvider } from '@mui/material'
-import { theme } from '../../../theme'
-import { BrowserRouter } from 'react-router-dom'
+import React, { ReactNode } from 'react';
+import { ThemeProvider } from 'styled-components';
+import { CssBaseline, ThemeProvider as MuiThemeProvider } from '@mui/material';
+import { theme } from '../../../theme';
+import { BrowserRouter } from 'react-router-dom';
 
 type Props = {
-  children: ReactNode
+  children: ReactNode;
 }
 
 function AppProvider({ children }: Props) {
@@ -22,7 +22,7 @@ function AppProvider({ children }: Props) {
         </BrowserRouter>
       </ThemeProvider>
     </MuiThemeProvider>
-  )
+  );
 }
 
-export default AppProvider
+export default AppProvider;

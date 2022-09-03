@@ -3,4 +3,4 @@ enum RoutePath {
   TaskDetails = '/tasks/:id',
 }
 
-export { RoutePath }
+export { RoutePath };

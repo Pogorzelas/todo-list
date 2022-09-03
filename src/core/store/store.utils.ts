@@ -1,26 +1,26 @@
-import { store } from './store'
+import { store } from './store';
 
-const STORE_LOCALSTORAGE_KEY = 'store'
+const STORE_LOCALSTORAGE_KEY = 'store';
 
 function subscriptionListener() {
-  const state = store.getState()
-  const serializedState = JSON.stringify(state)
+  const state = store.getState();
+  const serializedState = JSON.stringify(state);
 
-  localStorage.setItem(STORE_LOCALSTORAGE_KEY, serializedState)
+  localStorage.setItem(STORE_LOCALSTORAGE_KEY, serializedState);
 }
 
 function setPreloadedState() {
   try {
-    const serializedState = localStorage.getItem(STORE_LOCALSTORAGE_KEY)
+    const serializedState = localStorage.getItem(STORE_LOCALSTORAGE_KEY);
 
     if (!serializedState) {
-      return
+      return;
     }
 
-    const state = JSON.parse(serializedState)
+    const state = JSON.parse(serializedState);
 
-    return state
+    return state;
   } catch (error) {}
 }
 
-export { subscriptionListener, setPreloadedState }
+export { subscriptionListener, setPreloadedState };

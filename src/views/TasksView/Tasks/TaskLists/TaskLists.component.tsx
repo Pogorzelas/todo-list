@@ -1,7 +1,7 @@
-import React from 'react'
-import { TaskStatus } from '../Tasks.enums'
-import TaskList from './TaskList'
-import { StyledContainer } from './TaskLists.styles'
+import React from 'react';
+import { TaskStatus } from '../Tasks.enums';
+import TaskList from './TaskList';
+import { StyledContainer } from './TaskLists.styles';
 
 function TaskLists() {
   return (
@@ -19,7 +19,7 @@ function TaskLists() {
         listStatus={TaskStatus.DONE}
       />
     </StyledContainer>
-  )
+  );
 }
 
-export default TaskLists
+export default TaskLists;

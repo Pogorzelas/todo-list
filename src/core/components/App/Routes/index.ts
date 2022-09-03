@@ -1,2 +1,2 @@
-export { default } from './Routes.component'
-export { RoutePath } from './Routes.enums'
+export { default } from './Routes.component';
+export { RoutePath } from './Routes.enums';

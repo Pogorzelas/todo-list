@@ -1,7 +1,7 @@
-import React from 'react'
-import { Route, Switch } from 'react-router'
-import { RoutePath } from './Routes.enums'
-import TasksView from '../../../../views/TasksView'
+import React from 'react';
+import { Route, Switch } from 'react-router';
+import { RoutePath } from './Routes.enums';
+import TasksView from '../../../../views/TasksView';
 
 function Routes() {
   return (
@@ -14,7 +14,7 @@ function Routes() {
         path={RoutePath.TaskDetails}
       />
     </Switch>
-  )
+  );
 }
 
-export default Routes
+export default Routes;

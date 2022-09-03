@@ -4,4 +4,4 @@ enum TaskStatus {
   DONE = 'done',
 }
 
-export { TaskStatus }
+export { TaskStatus };

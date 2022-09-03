@@ -1,21 +1,21 @@
-import { useTasksAction } from '../../../../../../core/store/reducers/tasks'
-import { TaskStatus } from '../../../Tasks.enums'
+import { useTasksAction } from '../../../../../../core/store/reducers/tasks';
+import { TaskStatus } from '../../../Tasks.enums';
 
 function useTaskItemManager(id: string) {
-  const { removeTask, changeTaskStatus } = useTasksAction()
+  const { removeTask, changeTaskStatus } = useTasksAction();
 
   const handleRemoveTask = () => {
-    removeTask(id)
-  }
+    removeTask(id);
+  };
 
   const handleChangeTaskStatus = (statusToChange: TaskStatus) => () => {
-    changeTaskStatus(id, statusToChange)
-  }
+    changeTaskStatus(id, statusToChange);
+  };
 
   return {
     handleRemoveTask,
     handleChangeTaskStatus,
-  }
+  };
 }
 
-export { useTaskItemManager }
+export { useTaskItemManager };

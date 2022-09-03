@@ -1,16 +1,16 @@
-import React from 'react'
-import { Box, Button } from '@mui/material'
-import { TaskStatus } from '../../../Tasks.enums'
-import { useTaskItemManager } from './TaskItem.hooks'
+import React from 'react';
+import { Box, Button } from '@mui/material';
+import { TaskStatus } from '../../../Tasks.enums';
+import { useTaskItemManager } from './TaskItem.hooks';
 
 type Props = {
-  id: string
-  name: string
-  status: TaskStatus
+  id: string;
+  name: string;
+  status: TaskStatus;
 }
 
 function TaskItem({ id, name, status }: Props) {
-  const { handleRemoveTask, handleChangeTaskStatus } = useTaskItemManager(id)
+  const { handleRemoveTask, handleChangeTaskStatus } = useTaskItemManager(id);
 
   return (
     <Box>
@@ -42,7 +42,7 @@ function TaskItem({ id, name, status }: Props) {
         delete
       </Button>
     </Box>
-  )
+  );
 }
 
-export default TaskItem
+export default TaskItem;

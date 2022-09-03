@@ -1,1 +1,1 @@
-export { default } from './TaskInput.component'
+export { default } from './TaskInput.component';
