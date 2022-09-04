@@ -4,13 +4,13 @@ import { useTaskInputManager } from './TaskInput.hooks';
 import { StyledBox } from './TaskInput.styles';
 
 function TaskInput() {
-  const { value, handleChange, handleAdd } = useTaskInputManager();
+  const { inputValue, handleChange, handleAdd } = useTaskInputManager();
 
   return (
     <StyledBox>
       <TextField
         size="small"
-        value={value}
+        value={inputValue}
         onChange={handleChange}
       />
       <Button

@@ -5,26 +5,26 @@ import { TaskStatus } from '../Tasks.enums';
 import { useTasksAction } from '../../../../core/store/reducers/tasks';
 
 function useTaskInputManager() {
-  const [value, setValue] = useState('');
+  const [inputValue, setInputValue] = useState('');
   const { addTask } = useTasksAction();
 
   const handleChange = (event: ChangeEvent<HTMLInputElement>) => {
     const { value } = event.target;
-    setValue(value);
+    setInputValue(value);
   };
 
   const handleAdd = () => {
     const task: Task = {
       id: generateId(),
       status: TaskStatus.TODO,
-      name: value,
+      name: inputValue,
     };
     addTask(task);
-    setValue('');
+    setInputValue('');
   };
 
   return {
-    value,
+    inputValue,
     handleChange,
     handleAdd,
   };

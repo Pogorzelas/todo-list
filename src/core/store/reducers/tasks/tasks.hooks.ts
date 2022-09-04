@@ -1,10 +1,10 @@
-import { useAppDispatch } from '../../store.hooks';
-import { tasksSlice } from './tasks.slice';
 import { useCallback } from 'react';
 import { Task } from './tasks.types';
+import { tasksSlice } from './tasks.slice';
 import { TaskStatus } from './tasks.enums';
+import { useAppDispatch } from '../../store.hooks';
 
-const useTasksAction = () => {
+function useTasksAction () {
   const dispatch = useAppDispatch();
 
   const addTask = useCallback(
@@ -33,6 +33,6 @@ const useTasksAction = () => {
     removeTask,
     changeTaskStatus,
   };
-};
+}
 
 export { useTasksAction };
