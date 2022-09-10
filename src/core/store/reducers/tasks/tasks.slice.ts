@@ -22,10 +22,10 @@ const tasksSlice = createSlice({
       action: PayloadAction<{
         id: string;
         statusToChange: TaskStatus;
-      }>
+      }>,
     ) => {
       const taskIndex = state.entities.findIndex(
-        (entity) => entity.id === action.payload.id
+        entity => entity.id === action.payload.id,
       );
 
       const isTaskFound = taskIndex > -1;
@@ -36,7 +36,7 @@ const tasksSlice = createSlice({
     },
     removeTask: (state, action: PayloadAction<{ id: string; }>) => {
       state.entities = state.entities.filter(
-        (entity) => entity.id !== action.payload.id
+        entity => entity.id !== action.payload.id,
       );
     },
   },

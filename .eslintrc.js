@@ -2,7 +2,7 @@ module.exports = {
   env: {
     browser: true,
     es2021: true,
-    node: true
+    node: true,
   },
   extends: [],
   overrides: [],
@@ -12,7 +12,7 @@ module.exports = {
     sourceType: 'module',
   },
   plugins: [
-    'react', '@typescript-eslint'
+    'react', '@typescript-eslint',
   ],
   rules: {
     'array-callback-return': ['error', { checkForEach: true }],
@@ -67,7 +67,7 @@ module.exports = {
       functions: true,
       classes: true,
       variables: true,
-      allowNamedExports: true
+      allowNamedExports: true,
     }],
     'no-useless-backreference': 'error',
     'use-isnan': ['error', {enforceForSwitchCase: false, enforceForIndexOf: true}],
@@ -123,7 +123,7 @@ module.exports = {
     'no-useless-rename': ['error', {
       ignoreDestructuring: false,
       ignoreImport: false,
-      ignoreExport: false
+      ignoreExport: false,
     }],
     'no-useless-return': 'error',
     'no-var': 'error',
@@ -144,8 +144,30 @@ module.exports = {
     // 'sort-keys': 'error',
     'vars-on-top': 'error',
     yoda: ['error', 'never', { exceptRange: true }],
+    'array-bracket-newline': ['error', 'consistent'],
+    'array-bracket-spacing': ['error', 'never'],
+    'arrow-parens': ['error', 'as-needed'],
+    'arrow-spacing': ['error', { before: true, after: true }],
+    'block-spacing': ['error', 'always'],
+    'brace-style': 'error',
+    'comma-dangle': ['error', 'always-multiline'], // impact ts
+    'comma-spacing': ['error', { before: false, after: true }],
+    'comma-style': 'error',
+    'computed-property-spacing': 'error',
+    'dot-location': ['error', 'property'],
+    'eol-last': ['error', 'always'],
+    'func-call-spacing': 'error',
+    'function-call-argument-newline': ['error', 'consistent'],
+    'function-paren-newline': ['error', 'multiline-arguments'],
+    'key-spacing': ['error', { beforeColon: false, afterColon: true }],
+    'keyword-spacing': ['error'],
+    'lines-between-class-members': 'error',
+    'max-len': ['error', { code: 120, ignoreComments: true }],
+    'max-statements-per-line': 'error',
+    'multiline-ternary': 'error',
+    'new-parens': 'error',
+    'newline-per-chained-call': 'error',
 
-    'comma-dangle': 'off',
     semi: ['error', 'always'],
     quotes: ['error', 'single'],
     '@typescript-eslint/explicit-function-return-type': 'off',
@@ -156,7 +178,8 @@ module.exports = {
     '@typescript-eslint/consistent-type-definitions': ['error', 'type'],
     '@typescript-eslint/indent': ['error', 2],
     '@typescript-eslint/semi': 'off',
-    '@typescript-eslint/no-shadow': ['error',  { hoist: 'all', }],
+    '@typescript-eslint/no-extra-parens': ['error', 'all', { ignoreJSX: 'all' }],
+    '@typescript-eslint/no-shadow': ['error',  { hoist: 'all' }],
     '@typescript-eslint/no-duplicate-enum-values': 'error',
     '@typescript-eslint/no-explicit-any': 'error',
     '@typescript-eslint/no-non-null-assertion': 'error',
@@ -164,13 +187,13 @@ module.exports = {
     '@typescript-eslint/member-delimiter-style': ['error', {
       multiline: {
         delimiter: 'semi',
-        requireLast: true
+        requireLast: true,
       },
       singleline: {
         delimiter: 'semi',
-        requireLast: true
+        requireLast: true,
       },
-      multilineDetection: 'brackets'
+      multilineDetection: 'brackets',
     }],
     '@typescript-eslint/method-signature-style': ['error', 'property'],
     '@typescript-eslint/no-empty-interface': 'error',
@@ -184,15 +207,15 @@ module.exports = {
       arrow: 'parens-new-line',
       condition: 'parens-new-line',
       logical: 'parens-new-line',
-      prop: 'parens-new-line'
+      prop: 'parens-new-line',
     }],
     'react/jsx-first-prop-new-line': ['error', 'always'],
     'react/jsx-tag-spacing': ['error', {
       closingSlash: 'never',
       beforeSelfClosing: 'proportional-always',
       afterOpening: 'never',
-      beforeClosing: 'proportional-always'
+      beforeClosing: 'proportional-always',
     }],
   },
-  ignorePatterns: ['**/*.d.ts']
+  ignorePatterns: ['**/*.d.ts'],
 };

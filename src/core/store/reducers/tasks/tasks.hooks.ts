@@ -11,21 +11,21 @@ function useTasksAction () {
     (task: Task) => {
       dispatch(tasksSlice.actions.addTask(task));
     },
-    [dispatch]
+    [dispatch],
   );
 
   const removeTask = useCallback(
     (id: string) => {
       dispatch(tasksSlice.actions.removeTask({ id }));
     },
-    [dispatch]
+    [dispatch],
   );
 
   const changeTaskStatus = useCallback(
     (id: string, statusToChange: TaskStatus) => {
       dispatch(tasksSlice.actions.changeTaskStatus({ id, statusToChange }));
     },
-    [dispatch]
+    [dispatch],
   );
 
   return {
