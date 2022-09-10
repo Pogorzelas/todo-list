@@ -4,7 +4,7 @@ import { tasksSlice } from './tasks.slice';
 import { TaskStatus } from './tasks.enums';
 import { useAppDispatch } from '../../store.hooks';
 
-function useTasksAction () {
+function useTasksAction() {
   const dispatch = useAppDispatch();
 
   const addTask = useCallback(
