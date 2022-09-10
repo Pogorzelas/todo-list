@@ -10,9 +10,12 @@ module.exports = {
   parserOptions: {
     ecmaVersion: 'latest',
     sourceType: 'module',
+    project: ['./tsconfig.json'],
   },
   plugins: [
-    'react', '@typescript-eslint',
+    'react',
+    '@typescript-eslint',
+    'import',
   ],
   rules: {
     'array-callback-return': ['error', { checkForEach: true }],
@@ -32,7 +35,7 @@ module.exports = {
     'no-dupe-else-if': 'error',
     'no-dupe-keys': 'error',
     'no-duplicate-case': 'error',
-    'no-duplicate-imports': 'error',
+    // 'no-duplicate-imports': 'error',
     'no-empty-character-class': 'error',
     'no-empty-pattern': 'error',
     'no-ex-assign': 'error',
@@ -79,7 +82,7 @@ module.exports = {
     curly: 'error',
     'default-case': 'error',
     'default-case-last': 'error',
-    'default-param-last': 'error',
+    'default-param-last': 'off', // impact ts
     'dot-notation': ['error'],
     eqeqeq: 'error',
     'func-style': ['error', 'declaration', { allowArrowFunctions: true }],
@@ -150,7 +153,7 @@ module.exports = {
     'arrow-spacing': ['error', { before: true, after: true }],
     'block-spacing': ['error', 'always'],
     'brace-style': 'error',
-    'comma-dangle': ['error', 'always-multiline'], // impact ts
+    'comma-dangle': ['error', 'always-multiline'],
     'comma-spacing': ['error', { before: false, after: true }],
     'comma-style': 'error',
     'computed-property-spacing': 'error',
@@ -189,12 +192,25 @@ module.exports = {
     'template-curly-spacing': 'error',
     'template-tag-spacing': 'error',
     'wrap-iife': ['error', 'inside'],
-
+    '@typescript-eslint/adjacent-overload-signatures': 'error',
+    '@typescript-eslint/array-type': 'error',
+    '@typescript-eslint/await-thenable': 'error',
+    '@typescript-eslint/ban-ts-comment': ['error', { 'ts-expect-error': 'allow-with-description' }],
+    '@typescript-eslint/ban-types': 'error',
+    '@typescript-eslint/consistent-generic-constructors': ['error', 'constructor'],
+    '@typescript-eslint/consistent-type-assertions': [
+      'error',
+      {
+        assertionStyle: 'as',
+        objectLiteralTypeAssertions: 'never',
+      },
+    ],
+    '@typescript-eslint/consistent-type-exports': 'error',
+    '@typescript-eslint/consistent-type-imports': 'error',
+    '@typescript-eslint/default-param-last': 'error',
     '@typescript-eslint/explicit-function-return-type': 'off',
     '@typescript-eslint/space-before-function-paren': 'off',
-    '@typescript-eslint/ban-types': 'error',
     '@typescript-eslint/no-unused-vars': ['error', { ignoreRestSiblings: true }],
-    '@typescript-eslint/consistent-generic-constructors': ['error', 'constructor'],
     '@typescript-eslint/consistent-type-definitions': ['error', 'type'],
     '@typescript-eslint/indent': ['error', 2],
     '@typescript-eslint/semi': 'off',
@@ -218,6 +234,7 @@ module.exports = {
     '@typescript-eslint/method-signature-style': ['error', 'property'],
     '@typescript-eslint/no-empty-interface': 'error',
     '@typescript-eslint/strict-boolean-expressions': 'off',
+    'import/no-duplicates': 'error',
     'react/jsx-one-expression-per-line': ['error', { allow: 'literal' }],
     'react/jsx-max-props-per-line': ['error', { maximum: 1 }],
     'react/jsx-wrap-multilines': ['error', {
