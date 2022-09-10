@@ -1,4 +1,4 @@
-import { TaskStatus } from './Tasks.enums';
+import type { TaskStatus } from './Tasks.enums';
 
 type Task = {
   id: string;

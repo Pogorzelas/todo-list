@@ -1,6 +1,6 @@
 import { Box, Typography } from '@mui/material';
 import React from 'react';
-import { TaskStatus } from '../../Tasks.enums';
+import type { TaskStatus } from '../../Tasks.enums';
 import TaskItem from './TaskItem';
 import { useFilterTasksByStatus } from './TaskList.hooks';
 

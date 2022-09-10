@@ -1,5 +1,5 @@
 import { useTasksAction } from '../../../../../../core/store/reducers/tasks';
-import { TaskStatus } from '../../../Tasks.enums';
+import type { TaskStatus } from '../../../Tasks.enums';
 
 function useTaskItemManager(id: string) {
   const { removeTask, changeTaskStatus } = useTasksAction();

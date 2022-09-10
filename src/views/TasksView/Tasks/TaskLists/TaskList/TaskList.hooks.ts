@@ -1,4 +1,4 @@
-import { TaskStatus } from '../../Tasks.enums';
+import type { TaskStatus } from '../../Tasks.enums';
 import { useAppSelector } from '../../../../../core/store';
 
 function useFilterTasksByStatus(status: TaskStatus) {

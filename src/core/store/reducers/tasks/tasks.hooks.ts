@@ -1,7 +1,7 @@
 import { useCallback } from 'react';
-import { Task } from './tasks.types';
+import type { Task } from './tasks.types';
 import { tasksSlice } from './tasks.slice';
-import { TaskStatus } from './tasks.enums';
+import type { TaskStatus } from './tasks.enums';
 import { useAppDispatch } from '../../store.hooks';
 
 function useTasksAction() {

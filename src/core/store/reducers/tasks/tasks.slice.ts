@@ -1,6 +1,7 @@
-import { PayloadAction, createSlice } from '@reduxjs/toolkit';
-import { Task } from './tasks.types';
-import { TaskStatus } from './tasks.enums';
+import type { PayloadAction } from '@reduxjs/toolkit';
+import { createSlice } from '@reduxjs/toolkit';
+import type { Task } from './tasks.types';
+import type { TaskStatus } from './tasks.enums';
 
 type State = {
   entities: Task[];

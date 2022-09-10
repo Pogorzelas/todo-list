@@ -1,5 +1,6 @@
-import { ChangeEvent, useState } from 'react';
-import { Task } from '../Tasks.types';
+import type { ChangeEvent } from 'react';
+import { useState } from 'react';
+import type { Task } from '../Tasks.types';
 import { generateId } from '../../../../shared/utils/generateId';
 import { TaskStatus } from '../Tasks.enums';
 import { useTasksAction } from '../../../../core/store/reducers/tasks';
