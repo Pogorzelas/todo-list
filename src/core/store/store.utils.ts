@@ -1,6 +1,12 @@
 import { store } from './store';
+import type { RootState } from './reducers';
+import { isObject } from '../../shared/type-guards/isObject';
 
 const STORE_LOCALSTORAGE_KEY = 'store';
+
+function isStoreState(value: unknown): value is RootState {
+  return isObject(value);
+}
 
 function subscriptionListener() {
   const state = store.getState();
@@ -17,9 +23,11 @@ function setPreloadedState() {
       return;
     }
 
-    const state = JSON.parse(serializedState);
+    const state: unknown = JSON.parse(serializedState);
 
-    return state;
+    if (isStoreState(state)) {
+      return state;
+    }
   } catch (error) {}
 }
 

@@ -1,13 +1,13 @@
 import { configureStore } from '@reduxjs/toolkit';
-import { tasksSlice } from './reducers/tasks';
 import { setPreloadedState, subscriptionListener } from './store.utils';
+import { combinedReducer } from './reducers';
 
-export const store = configureStore({
+const store = configureStore({
   devTools: true,
   preloadedState: setPreloadedState(),
-  reducer: {
-    [tasksSlice.name]: tasksSlice.reducer,
-  },
+  reducer: combinedReducer,
 });
 
 store.subscribe(subscriptionListener);
+
+export { store };
