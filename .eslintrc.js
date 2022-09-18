@@ -366,6 +366,7 @@ module.exports = {
     'react/jsx-equals-spacing': 'error',
     'react/jsx-first-prop-new-line': ['error', 'always'],
     'react/jsx-fragments': 'error',
+    'react/jsx-indent': ['error', 2],
     'react/jsx-key': ['error', { checkFragmentShorthand: true, warnOnDuplicates: true }],
     'react/jsx-max-props-per-line': ['error', { maximum: 1 }],
     'react/jsx-newline': ['error', { prevent: true }],

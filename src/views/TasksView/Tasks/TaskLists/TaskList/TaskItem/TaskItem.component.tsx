@@ -14,27 +14,33 @@ function TaskItem({ id, name, status }: Props) {
   return (
     <Box>
       {name}
-      {status !== TaskStatus.TODO && (
-        <Button
-          onClick={handleChangeTaskStatus(TaskStatus.TODO)}
-        >
-          todo
-        </Button>
-      )}
-      {status !== TaskStatus.IN_PROGRESS && (
-        <Button
-          onClick={handleChangeTaskStatus(TaskStatus.IN_PROGRESS)}
-        >
-          in progres
-        </Button>
-      )}
-      {status !== TaskStatus.DONE && (
-        <Button
-          onClick={handleChangeTaskStatus(TaskStatus.DONE)}
-        >
-          done
-        </Button>
-      )}
+      {
+        status !== TaskStatus.TODO && (
+          <Button
+            onClick={handleChangeTaskStatus(TaskStatus.TODO)}
+          >
+            todo
+          </Button>
+        )
+      }
+      {
+        status !== TaskStatus.IN_PROGRESS && (
+          <Button
+            onClick={handleChangeTaskStatus(TaskStatus.IN_PROGRESS)}
+          >
+            in progres
+          </Button>
+        )
+      }
+      {
+        status !== TaskStatus.DONE && (
+          <Button
+            onClick={handleChangeTaskStatus(TaskStatus.DONE)}
+          >
+            done
+          </Button>
+        )
+      }
       <Button
         onClick={handleRemoveTask}
       >
