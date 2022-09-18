@@ -18,14 +18,16 @@ function TaskList({ listStatus, title }: Props) {
       >
         {title}
       </Typography>
-      {filteredTasks.map(task => (
-        <TaskItem
-          key={task.id}
-          id={task.id}
-          name={task.name}
-          status={task.status}
-        />
-      ))}
+      {
+        filteredTasks.map(task => (
+          <TaskItem
+            key={task.id}
+            id={task.id}
+            name={task.name}
+            status={task.status}
+          />
+        ))
+      }
     </Box>
   );
 }
