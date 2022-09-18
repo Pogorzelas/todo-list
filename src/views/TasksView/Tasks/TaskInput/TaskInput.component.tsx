@@ -1,4 +1,3 @@
-import React from 'react';
 import { Button, TextField } from '@mui/material';
 import { useTaskInputManager } from './TaskInput.hooks';
 import { StyledBox } from './TaskInput.styles';

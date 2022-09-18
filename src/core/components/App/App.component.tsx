@@ -1,4 +1,3 @@
-import React from 'react';
 import AppProvider from './AppProvider';
 import Routes from './Routes';
 import { store } from '../../store';

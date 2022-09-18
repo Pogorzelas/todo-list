@@ -1,4 +1,3 @@
-import React from 'react';
 import Tasks from './Tasks';
 import { StyledLayout } from './TasksView.styles';
 

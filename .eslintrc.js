@@ -4,7 +4,9 @@ module.exports = {
     es2021: true,
     node: true,
   },
-  extends: [],
+  extends: [
+    'plugin:react/jsx-runtime',
+  ],
   overrides: [],
   parser: '@typescript-eslint/parser',
   parserOptions: {
@@ -334,6 +336,16 @@ module.exports = {
         message: 'Boolean prop should starts with "is" or "has"',
       },
     ],
+    'react/destructuring-assignment': ['error', 'always', { destructureInSignature: 'always' }],
+    'react/function-component-definition': ['error', { namedComponents: 'function-declaration' }],
+    'react/hook-use-state': 'error',
+    'react/no-array-index-key': 'error',
+    'react/no-danger': 'error',
+    'react/no-multi-comp': 'error',
+    'react/no-namespace': 'error',
+    'react/no-unknown-property': 'error',
+    'react/no-unstable-nested-components': ['error', { allowAsProps: false }],
+    'react/no-unused-prop-types': 'error',
     'react/jsx-one-expression-per-line': ['error', { allow: 'literal' }],
     'react/jsx-max-props-per-line': ['error', { maximum: 1 }],
     'react/jsx-wrap-multilines': ['error', {

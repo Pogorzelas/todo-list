@@ -1,4 +1,3 @@
-import React from 'react';
 import { Route, Switch } from 'react-router';
 import { RoutePath } from './Routes.enums';
 import TasksView from '../../../../views/TasksView';

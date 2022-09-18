@@ -1,5 +1,4 @@
 import type { ReactNode } from 'react';
-import React from 'react';
 import { ThemeProvider } from 'styled-components';
 import { CssBaseline, ThemeProvider as MuiThemeProvider } from '@mui/material';
 import { theme } from '../../../theme';
