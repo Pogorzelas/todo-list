@@ -6,4 +6,9 @@ type Task = {
   status: TaskStatus;
 }
 
-export type { Task };
+type TaskPayload = {
+  name: string;
+  status: TaskStatus;
+}
+
+export type { Task, TaskPayload };

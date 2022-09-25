@@ -1,7 +1,5 @@
 import type { ChangeEvent } from 'react';
 import { useState } from 'react';
-import type { Task } from '../Tasks.types';
-import { generateId } from '../../../../shared/utils/generateId';
 import { TaskStatus } from '../Tasks.enums';
 import { useTasksAction } from '../../../../core/store/reducers/tasks';
 
@@ -15,12 +13,11 @@ function useTaskInputManager() {
   };
 
   const handleAdd = () => {
-    const task: Task = {
-      id: generateId(),
+    const taskPayload = {
       status: TaskStatus.TODO,
       name: inputValue,
     };
-    addTask(task);
+    addTask(taskPayload);
     setInputValue('');
   };
 

@@ -1,7 +1,8 @@
 import type { PayloadAction } from '@reduxjs/toolkit';
 import { createSlice } from '@reduxjs/toolkit';
-import type { Task } from './tasks.types';
+import type { Task, TaskPayload } from './tasks.types';
 import type { TaskStatus } from './tasks.enums';
+import { generateId } from '../../../../shared/utils/generateId';
 
 type State = {
   entities: Task[];
@@ -15,8 +16,11 @@ const tasksSlice = createSlice({
   name: 'tasks',
   initialState,
   reducers: {
-    addTask: (state, action: PayloadAction<Task>) => {
-      state.entities.push(action.payload);
+    addTask: (state, action: PayloadAction<TaskPayload>) => {
+      state.entities.push({
+        id: generateId(),
+        ...action.payload,
+      });
     },
     changeTaskStatus: (
       state,

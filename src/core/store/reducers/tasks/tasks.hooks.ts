@@ -1,5 +1,5 @@
 import { useCallback } from 'react';
-import type { Task } from './tasks.types';
+import type { TaskPayload } from './tasks.types';
 import { tasksSlice } from './tasks.slice';
 import type { TaskStatus } from './tasks.enums';
 import { useAppDispatch } from '../../store.hooks';
@@ -8,8 +8,8 @@ function useTasksAction() {
   const dispatch = useAppDispatch();
 
   const addTask = useCallback(
-    (task: Task) => {
-      dispatch(tasksSlice.actions.addTask(task));
+    (taskPayload: TaskPayload) => {
+      dispatch(tasksSlice.actions.addTask(taskPayload));
     },
     [dispatch],
   );
